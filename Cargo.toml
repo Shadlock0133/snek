@@ -1,0 +1,8 @@
+[package]
+name = "snek"
+version = "0.1.0"
+authors = ["Aurora <tomek-kubel2@wp.pl>"]
+
+[dependencies]
+piston_window = "0.73"
+rand = "0.3"
