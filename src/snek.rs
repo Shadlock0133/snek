@@ -81,7 +81,7 @@ impl Snek {
     }
 
     fn update_speed(&mut self) {
-        let speed = 20 - ((self.body.len() as u32) / 3);
+        let speed = 20 - ((self.body.len() as u32) / 2);
         let speed = if speed == 0 {
             1
         } else if speed > 20 {
@@ -118,7 +118,7 @@ impl Snek {
         fn ramp(min: [f32; 4], max: [f32; 4], value: f32) -> [f32; 4] {
             let mut out = [0.; 4];
             for i in 0..4 {
-                out[i] = ((min[i] * (1. - value)) + (max[i] * value)) / 2.;
+                out[i] = (min[i] * (1. - value)) + (max[i] * value);
             }
             out
         }
