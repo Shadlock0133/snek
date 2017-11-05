@@ -44,7 +44,7 @@ fn main() {
     let mut window: PistonWindow = 
         WindowSettings::new("Snek", [WINDOW_WIDTH as u32, WINDOW_HEIGHT as u32])
         .exit_on_esc(true)
-	.opengl(OpenGL::V2_1)
+//	.opengl(OpenGL::V2_1)
         .build()
         .unwrap();
     let mut snek = Snek::new(WIDTH as u32 / 2, HEIGHT as u32 / 2);
