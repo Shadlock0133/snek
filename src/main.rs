@@ -59,6 +59,10 @@ fn main() {
                     Key::S | Key::Down => snek.turn(Direction::Down),
                     Key::A | Key::Left => snek.turn(Direction::Left),
                     Key::D | Key::Right => snek.turn(Direction::Right),
+                    Key::Space => snek.enlong(),
+                    Key::H => {
+                        for _ in 0..10 { snek.enlong(); }
+                    }
                     _ => (),
                 }
             }
