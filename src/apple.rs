@@ -1,4 +1,5 @@
 use piston_window::*;
+use a3d;
 
 use {WIDTH, HEIGHT, SCALE};
 
@@ -22,7 +23,7 @@ impl Apple {
     pub fn draw<G: Graphics>(&self, c: &Context, g: &mut G) {
         let (x, y) = (self.pos.0 as f64, self.pos.1 as f64);
         let scale = SCALE as f64;
-        rectangle(
+        a3d::rectangle(
             [1., 0., 0., 1.],
             [(x + 1.) * scale, (y + 1.) * scale, scale, scale],
             c.transform,

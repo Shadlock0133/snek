@@ -5,6 +5,7 @@ use piston_window::*;
 use {WIDTH, HEIGHT, SCALE};
 use apple::*;
 use counter::*;
+use a3d;
 
 #[derive(Clone, Copy)]
 enum State {
@@ -138,7 +139,7 @@ impl Snek {
         for (index, &(x, y)) in self.body.iter().enumerate() {
             let (x, y) = (x as f64, y as f64);
             let scale = SCALE as f64;
-            rectangle(
+            a3d::rectangle(
                 self.get_colour(index),
                 [(x + 1.) * scale, (y + 1.) * scale, scale, scale],
                 c.transform,
